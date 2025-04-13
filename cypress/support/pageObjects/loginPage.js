@@ -15,6 +15,14 @@ class LoginPage{
     verifyDashboard(){
         cy.url().should('include', "/dashboard")
     }
+
+    typeTextbox(text){
+        cy.get('#idtextbox1').type(text)
+    }
+
+    clickRadiobutton(){
+        cy.get("#idradiobutton1").click()
+    }
 }
 
 export default LoginPage

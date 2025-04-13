@@ -31,5 +31,8 @@ module.exports = defineConfig({
       inlineAssets: true,
       saveAllAttempts: false,
     },
+    // env: {
+    //   TAGS: "@smoke"
+    // }
   },
 });
