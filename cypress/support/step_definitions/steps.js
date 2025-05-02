@@ -1,44 +1,32 @@
-import { Given, When, Then  } from "@badeball/cypress-cucumber-preprocessor";
+import { Given, When, Then, Before, After, BeforeStep, AfterStep  } from "@badeball/cypress-cucumber-preprocessor";
 import LoginPage from "../pageObjects/loginPage";
-import { Before, After, BeforeStep, AfterStep } from "@badeball/cypress-cucumber-preprocessor";
 
 const loginPage = new LoginPage();
 
-
-Before({ tags: "not @smoke" }, () => {
-    cy.log("Run before every scenario (order 0)");
+  
+Before(function(){
+    cy.log("Run before every scenario");
 });
   
-Before(() => {
-    //cy.log("Run before every scenario (order 1)");
-    cy.visit("https://rohit-automation.netlify.app/")
-});
-  
-Before({ tags: "@smoke" }, () => {
-    cy.log("Run before every scenario (smoke tag and no order)");
+Before({tags: "@smoke"}, function(){
+    cy.log("Run before every smoke tag scenario");
 });
 
-
-After(() => {
-    cy.log("Run after every scenario (order 0)");
-});
-  
-After(() => {
-    cy.log("Run after every scenario (order 1)");
-});
-
-
-BeforeStep(() => {
+BeforeStep(function(){
     cy.log("Run before every step");
 });
-  
-AfterStep(() => {
+
+AfterStep(function(){
     cy.log("Run after every step");
 });
 
+After(function(){
+    cy.log("Run after every scenario");
+});
+
+
 Given('I am on login page', function(){
-    //cy.visit("https://rohit-automation.netlify.app/")
-    cy.log("i am on login page")
+    cy.visit("https://rohit-automation.netlify.app/")
 })
 
 When('I enter username and password', function(){
