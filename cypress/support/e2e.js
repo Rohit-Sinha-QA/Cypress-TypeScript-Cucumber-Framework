@@ -16,3 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import 'cypress-mochawesome-reporter/register';
+
+// run below first to install above
+// npm install --save-dev cypress-xpath cypress-iframe @4tw/cypress-drag-drop cypress-file-upload cypress-mochawesome-reporter
+// npm install --save-dev @badeball/cypress-cucumber-preprocessor @bahmutov/cypress-esbuild-preprocessor cucumber cypress cypress-cucumber-preprocessor cypress-mochawesome-reporter mochawesome mochawesome-merge mochawesome-report-generator
+
+
