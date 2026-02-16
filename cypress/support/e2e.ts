@@ -25,8 +25,3 @@ import "./commands";
 // npm i multiple-cucumber-html-reporter --save-dev
 // npm i -D multiple-cucumber-html-reporter rimraf
 // npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator cypress-mochawesome-reporter
-
-
-
-
-
