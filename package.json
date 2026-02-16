@@ -1,22 +1,29 @@
 {
-  "name": "cypress-javascript-cucumber",
+  "name": "cypress-typescript-cucumber-framework",
   "version": "1.0.0",
-  "description": "Cypress-Javascript-Cucumber",
-  "main": "index.js",
+  "description": "Cypress + TypeScript + Cucumber Framework with POM, UI + API, Tags, Reports",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:ui": "cypress run --env tags=\"@ui\"",
+    "test:api": "cypress run --env tags=\"@api\"",
+    "test:testtag": "cypress run --env TAGS=\"@test\"",
+    "report": "node cucumber-html-report.js",
+    "test:run:report": "cypress run && node cucumber-html-report.js"
   },
-  "author": "Rohit Sinha",
-  "license": "ISC",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
-    "cucumber": "^6.0.7",
-    "cypress": "^14.3.2",
-    "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-mochawesome-reporter": "^3.8.2",
-    "mochawesome": "^7.1.3",
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@types/cypress": "^0.1.6",
+    "@types/node": "^20.11.0",
+    "cypress": "^15.10.0",
+    "cypress-mochawesome-reporter": "^3.8.4",
+    "esbuild": "^0.27.3",
+    "mochawesome": "^7.1.4",
     "mochawesome-merge": "^4.4.1",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.3.2",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "rimraf": "^6.1.3",
+    "typescript": "^5.4.0"
   }
 }
